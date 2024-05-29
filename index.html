@@ -5,27 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khairulamirin - Personal Portfolio</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section id="nav-container">
         <nav class="nav-bar">
-        <a href="#">Home</a>
-        <a href="#">About Me</a>
-        <a href="#">Education</a>
-        <a href="#">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
         </nav>
+        <i id="listMenu" class="bi bi-list"></i>
     </section>
-    <section id="hero">
+    <div id="sidebar">
+        <div>
+            <h1>Logo</h1>
+            <i id="xIcon" class="bi bi-x"></i>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <section id="home">
         <img src="" alt="">
         <h1>Welcome to my <br><span>website</span></h1>
         <p>Diploma Chemical Engineering Graduate, now diving into the exciting world 
            of Software Engineering!</p>
     </section>
-    <section id="about-me">
+    <section id="about">
         <div id="left">
             <div class="text">
                 <h2>Khairulamirin</h2>
@@ -39,7 +55,7 @@
         </div>
         <img src="assets/khairulamirin.jpeg" alt="khairulamirin">  
     </section>
-    <footer>
+    <footer id="contact">
         <h2>Connect with Me</h2>
         <div id="social-media">
             <div class="instagram">
