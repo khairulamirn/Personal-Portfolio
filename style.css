@@ -7,6 +7,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6em;
 }
 
 body {
@@ -24,13 +25,13 @@ p {
 }
 
 #nav-container {
-    background-color: rgb(120, 140, 145);
-    position: sticky;
-    top: 2.5%;
-    z-index: 999;
     width: 55%;
     margin: 0 auto;
+    position: sticky;
+    top: 2.5%;
     border-radius: 10px;
+    z-index: 999;
+    background-color: rgb(120, 140, 145);
 }
 
 #nav-container > i#listMenu {
@@ -51,10 +52,7 @@ p {
 }
 
 div#sidebar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    display: none;
     padding-bottom: 16px;
     border-bottom: 1px solid black;
 }
@@ -123,6 +121,39 @@ div#sidebar > ul {
     border-radius: 20px;
 }
 
+#projects {
+    width: 50%;
+    margin: 5% auto 0 auto;
+}
+
+#projects > h1 {
+    margin-bottom: 10%;
+    font-size: 4rem;
+    text-align: center;
+    background-color: red;
+}
+
+#projects > #container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+}
+
+#projects > #container > div {
+    margin-top: 2%;
+    padding: 45px 30px;
+    width: 350px;
+    height: 530px;
+    border-radius: 30px;
+    background-color: #0f0f0f;
+}
+
+#projects > #container > div h3 {
+    margin-bottom: 5%;
+}
+
 footer {
     margin: 11% auto 1% auto;
     width: 80%;
@@ -181,5 +212,9 @@ footer > #social-media > div > h3 {
 
     #nav-container > .nav-bar{
         display: none;
+    }
+
+    div#sidebar {
+        display: block;
     }
 }
