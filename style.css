@@ -69,23 +69,28 @@ div#sidebar > ul {
 }
 
 #home {
-    width: 100%;
-    height: auto;
+    width: 90%;
+    margin: 13% auto 0 auto;
+    scroll-margin-top: 15em;
+    text-align: center;
+}
+
+#home > img {
+    width: 200px;
+    height: 235px;
+    margin-bottom: 20px;
+    border-radius: 45%;
 }
 
 #home > h1 {
-    margin: 10% auto 0 auto;
-    text-align: center;
-    font-size: 4rem;
-}
-
-#home > h1 > span {
-    color: rgb(120, 140, 145);
+    margin-top: 10px;
+    font-size: 3.5rem;
+    font-weight: 400;
+    /* color: rgb(120, 140, 145); */
 }
 
 #home > p {
     margin-top: 30px;
-    text-align: center;
     font-size: 16px;
     font-weight: 200;
 }
@@ -93,31 +98,31 @@ div#sidebar > ul {
 #about {
     margin: 20% auto 0 auto;
     width: 75%;
+}
+
+#about h1 {
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+#about > #box {
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
-    gap: 10%;
+    gap: 20px;
 }
 
-#about > #left > .text {
-    text-align: left;
-}
-
-#about > #left > .text > h2 {
-    margin-bottom: 5%;
-}
-
-#about > #left > .text > p {
-    line-height: 35px;
-}
-
-#about > #left > .fun-facts {
+#about > #box > .text .fun-facts {
     height: 300px;
+    margin-top: 100px;
     background-color: aqua;
 }
 
-#about > img {
+#about > #box > .img img {
     width: 450px;
-    height: 3%;
+    height: 95%;
     border-radius: 20px;
 }
 
@@ -128,24 +133,23 @@ div#sidebar > ul {
 
 #projects > h1 {
     margin-bottom: 10%;
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-align: center;
-    background-color: red;
+    font-weight: 400;
 }
 
 #projects > #container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 2%;
 }
 
-#projects > #container > div {
-    margin-top: 2%;
+#projects > #container > #left > div,
+#projects > #container > #right > div {
+    margin-top: 7%;
     padding: 45px 30px;
     width: 350px;
-    height: 530px;
     border-radius: 30px;
     background-color: #0f0f0f;
 }
@@ -154,14 +158,62 @@ div#sidebar > ul {
     margin-bottom: 5%;
 }
 
+#skills {
+    width: 80%;
+    margin: 10% auto;
+}
+
+#skills h1 {
+    margin-bottom: 10%;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+#skills > #skillContainer .skill {
+    margin: 50px 0;
+}
+
+#skills > #skillContainer > .skill > .skill-name {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#skills > #logoSkills {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+#skills > #logoSkills > img {
+    width: 70px;
+    height: 70px;
+}
+
+#skills > #skillContainer > .skill > .skill-bar {
+    width: 100%;
+    background-color: gray;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#skills > #skillContainer > .skill > .skill-bar > .skill-level {
+    height: 100%;
+    background-color: orange;
+}
+
 footer {
     margin: 11% auto 1% auto;
     width: 80%;
 }
 
-footer > h2 {
-    text-align: center;
+footer > h1 {
     margin-bottom: 3%;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 400;
 }
 
 footer > #social-media {
@@ -176,21 +228,26 @@ footer > #social-media > div {
     cursor: pointer;
     display: flex;
     flex-direction: row;
-    background-color: aqua;
     border: 0;
-    outline: 0;
     border-radius: 20px;
+    outline: 0;
+    background-color: aqua;
 }
 
 footer > #social-media > div > img {
     width: 50px;
     height: 50px;
-    margin: 20px 0 20px 20px;
+    margin: 17px 0 20px 15px;
 }
 
 footer > #social-media > div > h3 {
     height: 30px;
-    margin: 23px 0 0 20px;
+    margin: 20px 0 0 10px;
+}
+
+footer > p {
+    text-align: center;
+    margin: 25px auto;
 }
 
 @media (max-width: 470px) {
