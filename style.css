@@ -11,8 +11,13 @@ html {
 }
 
 body {
-    background-color: #181818;
-    color: white;
+    background-color: #ffffff;
+    color: black;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
 }
 
 h2 {
@@ -20,8 +25,8 @@ h2 {
 }
 
 p {
-    font-size: 16px;
-    font-weight: 200;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 #nav-container {
@@ -31,7 +36,7 @@ p {
     top: 2.5%;
     border-radius: 10px;
     z-index: 999;
-    background-color: rgb(120, 140, 145);
+    background-color: #f3f1f1;
 }
 
 #nav-container > i#listMenu {
@@ -46,9 +51,9 @@ p {
 }
 
 #nav-container > .nav-bar > a {
-    color: white;
     text-decoration: none;
     font-size: 1.3rem;
+    color: black;
 }
 
 div#sidebar {
@@ -70,29 +75,25 @@ div#sidebar > ul {
 
 #home {
     width: 90%;
-    margin: 13% auto 0 auto;
+    margin: 12% auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
     scroll-margin-top: 15em;
-    text-align: center;
+    text-align: left;
 }
 
 #home > img {
-    width: 200px;
-    height: 235px;
-    margin-bottom: 20px;
-    border-radius: 45%;
+    width: 450px;
+    height: 500px;
+    border-radius: 50%;
 }
 
-#home > h1 {
+#home > #homeText > h1 {
     margin-top: 10px;
-    font-size: 3.5rem;
-    font-weight: 400;
     /* color: rgb(120, 140, 145); */
-}
-
-#home > p {
-    margin-top: 30px;
-    font-size: 16px;
-    font-weight: 200;
 }
 
 #about {
@@ -103,21 +104,38 @@ div#sidebar > ul {
 #about h1 {
     margin-bottom: 5%;
     text-align: center;
-    font-size: 3.5rem;
-    font-weight: 400;
 }
 
 #about > #box {
     margin-top: 30px;
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 30px;
 }
 
-#about > #box > .text .fun-facts {
+#about > #box > .text > #insideBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#about > #box > .text > #insideBox > div {
     height: 300px;
-    margin-top: 100px;
-    background-color: aqua;
+    margin-top: 70px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #82d0e6;
+}
+
+#about > #box > .text > #insideBox > div h2 {
+    margin-bottom: 10px;
+    font-size: 3rem; 
+    font-weight: 350;
+    border-bottom: 1px solid rgb(112, 81, 81);
+}
+#about > #box > .text > #insideBox > .experience > div > ul li {
+    padding-top: 5px;
+    list-style: none;
 }
 
 #about > #box > .img img {
@@ -133,9 +151,7 @@ div#sidebar > ul {
 
 #projects > h1 {
     margin-bottom: 10%;
-    font-size: 3.5rem;
     text-align: center;
-    font-weight: 400;
 }
 
 #projects > #container {
@@ -145,18 +161,60 @@ div#sidebar > ul {
     gap: 2%;
 }
 
+/* Common styles for all projects div */
 #projects > #container > #left > div,
 #projects > #container > #right > div {
-    margin-top: 7%;
+    margin-top: 5%;
     padding: 45px 30px;
-    width: 350px;
+    width: 400px;
     border-radius: 30px;
-    background-color: #0f0f0f;
+    background-color: #f3f1f1;
+    background-size: 270px;
+    background-position: center;
+    background-position-y: 200px;
+    background-repeat: no-repeat;
+    transition: all 0.4s ease-in-out;
 }
 
 #projects > #container > div h3 {
-    margin-bottom: 5%;
+    margin-bottom: 7%;
+    font-size: 25px;
+    font-weight: 450;
 }
+
+#projects > #container > div button {
+    margin: 10px 0 0 120px;
+    padding: 5px;   
+    cursor: pointer;
+    color: #00a0dc;
+    border-color: #5abff5;
+}
+
+/* Specific background images and positions */
+#projects > #container > #left > .left-one {
+    background-image: url(assets/pacman.png);
+    background-position-y: 200px;
+}
+
+#projects > #container > #left > .left-two {
+    background-image: url(assets/taskapp.png);
+    background-position-y: 200px;
+}
+
+#projects > #container > #right > .right-one {
+    background-image: url(assets/quotegenerator.png);
+    background-position-y: 200px;
+}
+
+#projects > #container > #right > .right-two {
+    background-image: url(assets/passwordgenerator.png);
+    background-position-y: 230px;
+}
+
+/* #projects > #container > #left > div:hover,
+#projects > #container > #right > div:hover {
+    filter: brightness(30%); 
+} */
 
 #skills {
     width: 80%;
@@ -166,8 +224,6 @@ div#sidebar > ul {
 #skills h1 {
     margin-bottom: 10%;
     text-align: center;
-    font-size: 3.5rem;
-    font-weight: 400;
 }
 
 #skills > #skillContainer .skill {
@@ -205,18 +261,19 @@ div#sidebar > ul {
 }
 
 footer {
-    margin: 11% auto 1% auto;
-    width: 80%;
+    width: 100%;
+    height: 400px;
+    margin-top: 11%;
+    background-color: #e6e2e2;;
 }
 
-footer > h1 {
-    margin-bottom: 3%;
+footer h1 {
+    padding-top: 2%;
     text-align: center;
-    font-size: 3.5rem;
-    font-weight: 400;
 }
 
 footer > #social-media {
+    padding-top: 4%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -231,7 +288,33 @@ footer > #social-media > div {
     border: 0;
     border-radius: 20px;
     outline: 0;
-    background-color: aqua;
+}
+
+footer > #social-media > div.instagram,
+footer > #social-media > div.linkedin,
+footer > #social-media > div.github,
+footer > #social-media > div.gmail {
+    background: #f3f1f1;
+}
+
+footer > #social-media > div:hover {
+    color: white;
+}
+
+footer > #social-media > div.instagram:hover {
+    background: linear-gradient(90deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+footer > #social-media > div.linkedin:hover {
+    background: linear-gradient(45deg, #0077b5, #00a0dc);
+}
+
+footer > #social-media > div.github:hover {
+    background: linear-gradient(90deg, #24292e,#2b3137);
+}
+
+footer > #social-media > div.gmail:hover {
+    background: linear-gradient(90deg, #ff4343, #ff5d5d, #b9b5b5);
 }
 
 footer > #social-media > div > img {
@@ -247,7 +330,7 @@ footer > #social-media > div > h3 {
 
 footer > p {
     text-align: center;
-    margin: 25px auto;
+    margin: 80px auto;
 }
 
 @media (max-width: 470px) {
