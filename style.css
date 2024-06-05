@@ -36,41 +36,105 @@ p {
     top: 2.5%;
     border-radius: 10px;
     z-index: 999;
-    background-color: #f3f1f1;
+    background-color: #cfc9c9;
+}
+
+#nav-container > .nav-bar > img {
+    display: block;
+    margin: 0 70px 0 130px;
+}
+
+#nav-container > img {
+    display: none;
 }
 
 #nav-container > i#listMenu {
     display: none;
+    margin-top: 1%;
+    font-size: 30px;
 }
 
 #nav-container > .nav-bar {
-    height: 40px;
+    height: 50px;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
 }
 
 #nav-container > .nav-bar > a {
+    margin-right: 50px;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: black;
+}
+
+#nav-container > .nav-bar > a:hover {
+    text-decoration: underline;
+    font-size: 1.2rem;
+    color: #00a0dc;
+}
+
+div#sidebarBackground {
+    background-color: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 1000px;
+    height: 100vh;
 }
 
 div#sidebar {
     display: none;
     padding-bottom: 16px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    transition: all 0.4s;
+    border-bottom: 1px solid rgb(247, 238, 238);
+    background-color: white;
+    z-index: 999;
+}
+
+div#sidebar > div {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between; 
     border-bottom: 1px solid black;
 }
+
+div#sidebar > div i {
+    font-size: 25px;
+}
+
+div#sidebar > ul {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
 
 div#sidebar > ul {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: start;
     gap: 16px;
     list-style: none;
     padding: 16px;
     margin-top: 16px;
+}
+
+div#sidebar > ul > li > a {
+    all: unset;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+  
+div#sidebar > ul > li > a:hover {
+    text-decoration: underline;
 }
 
 #home {
@@ -91,9 +155,16 @@ div#sidebar > ul {
     border-radius: 50%;
 }
 
+#home > #homeText > h3 {
+    margin-top: 15px;
+}
+
 #home > #homeText > h1 {
     margin-top: 10px;
-    /* color: rgb(120, 140, 145); */
+}
+
+#home > #homeText > p {
+    margin-top: 30px;
 }
 
 #about {
@@ -113,6 +184,10 @@ div#sidebar > ul {
     gap: 30px;
 }
 
+#about > #box > .text > p {
+    line-height: 35px;
+}
+
 #about > #box > .text > #insideBox {
     display: flex;
     flex-direction: row;
@@ -129,8 +204,6 @@ div#sidebar > ul {
 
 #about > #box > .text > #insideBox > div h2 {
     margin-bottom: 10px;
-    font-size: 3rem; 
-    font-weight: 350;
     border-bottom: 1px solid rgb(112, 81, 81);
 }
 #about > #box > .text > #insideBox > .experience > div > ul li {
@@ -176,6 +249,11 @@ div#sidebar > ul {
     transition: all 0.4s ease-in-out;
 }
 
+#projects > #container > #left .left-one,
+#projects > #container > #right .right-two {
+    height: 600px;
+}
+
 #projects > #container > div h3 {
     margin-bottom: 7%;
     font-size: 25px;
@@ -219,6 +297,7 @@ div#sidebar > ul {
 #skills {
     width: 80%;
     margin: 10% auto;
+    scroll-margin-top: 9em;
 }
 
 #skills h1 {
@@ -262,13 +341,21 @@ div#sidebar > ul {
 
 footer {
     width: 100%;
-    height: 400px;
+    height: 500px;
     margin-top: 11%;
+    text-align: center;
     background-color: #e6e2e2;;
 }
 
+footer > img {
+    margin-top: 30px;
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%;
+}
+
 footer h1 {
-    padding-top: 2%;
+    padding-top: 1%;
     text-align: center;
 }
 
@@ -285,6 +372,7 @@ footer > #social-media > div {
     cursor: pointer;
     display: flex;
     flex-direction: row;
+    text-align: left;
     border: 0;
     border-radius: 20px;
     outline: 0;
@@ -330,24 +418,46 @@ footer > #social-media > div > h3 {
 
 footer > p {
     text-align: center;
-    margin: 80px auto;
+    margin: 50px auto;
 }
 
 @media (max-width: 470px) {
     
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1rem;
+    }
+    
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 0.7rem;
+    }
+
     #nav-container {
         width: 100%;
         height: 50px;
-        background-color: #1d1a1a;
-        border-radius: 0;
+        display: flex;
+        justify-content: space-around;
+        gap: 70%;
+        position: unset;
         top: 0;
+        border-radius: 0;
+        background-color: #eae9e9;
+        z-index: 1;
+    }
+
+    #nav-container > img {
+        display: block;
     }
 
     #nav-container > i#listMenu {
-        display: block;
-        font-size: 30px;
-        text-align: right;
-        padding: 5px 10px 10px 0;
+        display: inline-block;
     }
 
     #nav-container > .nav-bar{
@@ -355,6 +465,147 @@ footer > p {
     }
 
     div#sidebar {
-        display: block;
+        display: block; 
+    }
+    
+    #home {
+        width: 90%;
+        margin: 12% auto 0 auto;
+        flex-direction: column-reverse;
+        gap: 2%;
+        scroll-margin-top: 15em;
+        text-align: center;
+    }
+    
+    #home > img {
+        width: 175px;
+        height: 200px;
+    }
+    
+    #home > #homeText > h3 {
+        margin-top: 20px;
+    }
+    
+    #home > #homeText > h1 {
+        margin-top: 15px;
+    }
+    
+    #home > #homeText > p {
+        margin-top: 20px;
+    }
+
+    #about > #box {
+        flex-direction: column;
+    }
+    
+    #about > #box > .text > p {
+        line-height: 27px;
+    }
+
+    #about > #box > .text > #insideBox {
+        flex-direction: column;
+    }
+    
+    #about > #box > .text > #insideBox > div {
+        height: 250px;
+        margin-top: 20px;
+    }
+    
+    #about > #box > .text > #insideBox > .experience > div > ul li {
+        padding-top: 5px;
+        list-style: none;
+        font-size: 13px;
+    }
+    
+    #about > #box > .img img {
+        display: none;
+        width: 250px;
+        height: 50%;
+        border-radius: 20px;
+    }
+
+    #projects {
+        width: 50%;
+        margin: 10% auto 0 auto;
+    }
+    
+    #projects > #container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2%;
+    }
+    
+    #projects > #container > #left > div,
+    #projects > #container > #right > div {
+        margin-top: 5%;
+        width: 200px;
+        background-size: 180px;
+    }
+    
+    #projects > #container > #left .left-one,
+    #projects > #container > #right .right-two {
+        height: 460px;
+    }
+   
+    #projects > #container > div button {
+        width: 90px;
+        height: 30px;
+        margin: 10px 0 0 20px;
+        padding: 5px;   
+        font-size: 13px;
+    }
+    
+    #skills {
+        width: 80%;
+        margin: 15% auto;
+    }
+    
+    #skills > #logoSkills > img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #skills > #skillContainer > .skill > .skill-name {
+        margin-bottom: 15px;
+        display: flex;  
+        justify-content: space-between;
+        font-size: 13px;
+    }
+
+    footer {
+        height: 450px;
+    }
+
+    footer > img {
+        width: 50px; 
+        height: 50px; 
+    }
+    
+    footer > #social-media {
+        height: 270px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    footer > #social-media > div {
+        width: 50%;
+        height: 55px;
+    }
+    
+    footer > #social-media > div > img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    footer > #social-media > div > h3 {
+        height: 30px;
+        margin: 9px 0 0 10px;
+        font-size: 0.9rem;
+    }
+     
+    footer > p {
+        margin: 20px auto;
     }
 }

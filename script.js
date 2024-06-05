@@ -1,3 +1,9 @@
+// sidebar 
+const sideBar = document.querySelector("#sidebar");
+const sidebarBackground = document.querySelector("#sidebarBackground");
+const listMenu = document.querySelector("#listMenu");
+const closeIcon = document.querySelector("#xIcon");
+
 // social media 
 const instagram = document.querySelector(".instagram");
 const linkedIn = document.querySelector(".linkedin");
@@ -11,6 +17,27 @@ const button = {
     quote: document.querySelector("#button3"),
     randomPassword: document.querySelector("#button4"),
 };
+
+// sidebar clickevent 
+listMenu.addEventListener("click", function () {
+    console.log("menu button clicked");
+    sidebarBackground.style.visibility = "visible";
+    sideBar.style.right = "0";
+    
+});
+
+closeIcon.addEventListener("click", function () {
+    console.log("close button clicked"); 
+    sidebarBackground.style.visibility = "hidden";
+    sideBar.style.right = "-200px";
+});
+
+sidebarBackground.addEventListener ("click", function () {
+    console.log("background clicked");
+    sidebarBackground.style.visibility = "hidden";
+    sideBar.style.right = "-200px";
+
+});
 
 // projects click event 
 button.pacman.addEventListener ("click", function () {
@@ -28,8 +55,6 @@ button.quote.addEventListener ("click", function () {
 button.randomPassword.addEventListener ("click", function () {
     window.open("https://github.com/khairulamirn/JavaScript-Exercise/tree/main/Random%20Password%20Generator");
 });
-
-
 
 // social media click event
 instagram.addEventListener ("click", function () {
