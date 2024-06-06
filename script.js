@@ -1,3 +1,25 @@
+// light / dark mode 
+const modeToggle = document.querySelector("#modeToggle");
+
+function toggleDarkLight () {
+    // for light mode
+    if (document.body.classList.contains('darkMode')) {
+        document.body.classList.remove('darkMode');
+        // replace icon 
+        modeToggle.setAttribute('class', 'bi bi-moon-stars-fill');
+        console.log("light mode activated");
+    // for dark mode
+    // code to execute if condition is false
+    } else {
+        document.body.classList.add('darkMode');
+        // replace icon
+        modeToggle.setAttribute('class', 'bi bi-brightness-high-fill');
+        console.log("dark mode activated");
+    };
+};
+
+modeToggle.addEventListener("click", toggleDarkLight);
+
 // sidebar 
 const sideBar = document.querySelector("#sidebar");
 const sidebarBackground = document.querySelector("#sidebarBackground");
