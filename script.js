@@ -1,36 +1,12 @@
 // light / dark mode 
-const modeToggle = document.querySelector("#modeToggle");
-
-function toggleDarkLight () {
-    // for light mode
-    if (document.body.classList.contains('darkMode')) {
-        document.body.classList.remove('darkMode');
-        // replace icon 
-        modeToggle.setAttribute('class', 'bi bi-moon-stars-fill');
-        console.log("light mode activated");
-    // for dark mode
-    // code to execute if condition is false
-    } else {
-        document.body.classList.add('darkMode');
-        // replace icon
-        modeToggle.setAttribute('class', 'bi bi-brightness-high-fill');
-        console.log("dark mode activated");
-    };
-};
-
-modeToggle.addEventListener("click", toggleDarkLight);
+const body = document.querySelector("#body");
+const icon = document.querySelector("#modeToggle");
 
 // sidebar 
 const sideBar = document.querySelector("#sidebar");
 const sidebarBackground = document.querySelector("#sidebarBackground");
 const listMenu = document.querySelector("#listMenu");
 const closeIcon = document.querySelector("#xIcon");
-
-// social media 
-const instagram = document.querySelector(".instagram");
-const linkedIn = document.querySelector(".linkedin");
-const gitHub = document.querySelector(".github");
-const gmail = document.querySelector(".gmail");
 
 // projects 
 const button = {
@@ -39,6 +15,38 @@ const button = {
     quote: document.querySelector("#button3"),
     randomPassword: document.querySelector("#button4"),
 };
+
+// social media 
+const instagram = document.querySelector(".instagram");
+const linkedIn = document.querySelector(".linkedin");
+const gitHub = document.querySelector(".github");
+const gmail = document.querySelector(".gmail");
+
+
+// click event for light /dark mode
+function toggleDarkLight () {
+    // for dark mode
+    // to check if the body element has class name darkMode
+    if (!document.body.classList.contains('darkMode')) {
+        document.body.classList.add('darkMode');
+        // replace icon 
+        icon.setAttribute('class', 'bi bi-brightness-high-fill');
+        body.style.color = 'white';
+        body.style.background = '#181818';
+        console.log("dark mode activated");
+    // for light mode
+    // code to execute if condition is false
+    } else {
+        document.body.classList.remove('darkMode');
+        // replace icon
+        icon.setAttribute('class', 'bi bi-moon-stars-fill');
+        body.style.color = 'black';
+        body.style.background = 'white';
+        console.log("light mode activated");
+    };
+};
+
+modeToggle.addEventListener("click", toggleDarkLight);
 
 // sidebar clickevent 
 listMenu.addEventListener("click", function () {

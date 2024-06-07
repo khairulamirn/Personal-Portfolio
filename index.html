@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="body">
     <section id="navContainer">
         <nav class="nav-bar">
             <i id="modeToggle" class="bi bi-moon-stars-fill"></i>
@@ -141,9 +141,19 @@
             </div>
         </div>
     </section>
-    <footer id="contact">
-        <img src="assets/logo-khairul.jpg" alt="khairulamirin-logo">
-        <h1><span style="color: #82d0e6;">Connect</span> with me</h1> 
+    <section id="contact">
+        <h1><span style="color: #82d0e6;">Connect</span> with me</h1>
+        <div id="emailContainer">
+            <form action="https://api.web3forms.com/submit" method="POST" id="emailBox">
+                <input type="hidden" name="access_key" value="4a61d205-11d1-428f-a94e-aae9ec89ce83">
+                <input type="text" name="name" id="contactInput1" placeholder="Your Name" required>
+                <input type="email" name="email" id="contactInput2" placeholder="Your Email" required>
+                <textarea name="message" id="contactInput3" placeholder="Your Message" required></textarea>
+                <button type="submit" id="emailButton">Submit <i class="bi bi-arrow-right"></i></button>
+            </form>
+        </div>
+    </section>
+    <footer>
         <div id="social-media">
             <div class="instagram">
                 <img src="assets/instagram.png" alt="instagram">
@@ -162,6 +172,7 @@
                 <h3>Gmail <p>khairulamirin.lamin@gmail.com</p></h3>
             </div>
         </div>
+        <img src="assets/logo-khairul.jpg" alt="khairulamirin-logo">
         <p>© Khairulamirin 2024. All rights reserved.</p>
     </footer>
 </body>
