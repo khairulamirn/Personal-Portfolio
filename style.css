@@ -128,7 +128,6 @@ div#sidebar > ul {
     align-items: start;
 }
 
-
 div#sidebar > ul {
     display: flex;
     flex-direction: column;
@@ -300,11 +299,6 @@ div#sidebar > ul > li > a:hover {
     background-image: url(assets/passwordgenerator.png);
     background-position-y: 230px;
 }
-
-/* #projects > #container > #left > div:hover,
-#projects > #container > #right > div:hover {
-    filter: brightness(30%); 
-} */
 
 #skills {
     width: 80%;

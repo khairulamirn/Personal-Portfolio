@@ -27,6 +27,7 @@ const gmail = document.querySelector(".gmail");
 function toggleDarkLight () {
     // for dark mode
     // to check if the body element has class name darkMode
+    // logical NOT operator 
     if (!document.body.classList.contains('darkMode')) {
         document.body.classList.add('darkMode');
         // replace icon 
@@ -53,7 +54,6 @@ listMenu.addEventListener("click", function () {
     console.log("menu button clicked");
     sidebarBackground.style.visibility = "visible";
     sideBar.style.right = "0";
-    
 });
 
 closeIcon.addEventListener("click", function () {
@@ -66,7 +66,6 @@ sidebarBackground.addEventListener ("click", function () {
     console.log("background clicked");
     sidebarBackground.style.visibility = "hidden";
     sideBar.style.right = "-200px";
-
 });
 
 // projects click event 
@@ -89,20 +88,16 @@ button.randomPassword.addEventListener ("click", function () {
 // social media click event
 instagram.addEventListener ("click", function () {
     window.open("https://www.instagram.com/khairulamirn/");
-    console.log("Instagram open");
 });
 
 linkedIn.addEventListener ("click", function () {
     window.open("https://www.linkedin.com/in/khairulamirin-lamin-69443123b/");
-    console.log("linkedIn open");
 });
 
 gitHub.addEventListener ("click", function () {
     window.open("https://github.com/khairulamirn");
-    console.log("gitHub open");
 });
 
 gmail.addEventListener ("click", function () {
     window.open("mailto:khairulamirin.lamin@gmail.com");
-    console.log("gmail open");
 });
