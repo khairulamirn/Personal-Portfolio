@@ -1,6 +1,21 @@
 // light / dark mode 
 const body = document.querySelector("#body");
 const icon = document.querySelector("#modeToggle");
+const nav = document.querySelector("#navContainer");
+const aboutBox = {
+    education: document.querySelector(".education"),
+    experience: document.querySelector(".experience")
+};
+const projectsBox = {
+    pacman: document.querySelector(".left-one"),
+    taskApp: document.querySelector(".left-two"),
+    quote: document.querySelector(".right-one"),
+    randomPassword: document.querySelector(".right-two")
+};
+const emailContainer = document.querySelector("#emailContainer");
+const yourName = document.querySelector("#contactInpput1");
+const email = document.querySelector("#contactInpput2");
+const message = document.querySelector("#contactInpput3");
 
 // sidebar 
 const sideBar = document.querySelector("#sidebar");
@@ -33,7 +48,18 @@ function toggleDarkLight () {
         // replace icon 
         icon.setAttribute('class', 'bi bi-brightness-high-fill');
         body.style.color = 'white';
-        body.style.background = '#181818';
+        body.style.background = 'black';
+        nav.style.background = '#181818';
+        aboutBox.education.style.background = '#181818';
+        aboutBox.experience.style.background = '#181818';
+        projectsBox.pacman.style.background = '#181818';
+        projectsBox.taskApp.style.background = '#181818';
+        projectsBox.quote.style.background = '#181818';
+        projectsBox.randomPassword.style.background = '#181818';
+        emailContainer.style.background = '#181818';
+        yourName.style.background = 
+        email.style.background =
+        message.style.background =
         console.log("dark mode activated");
     // for light mode
     // code to execute if condition is false

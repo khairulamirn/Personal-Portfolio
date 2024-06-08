@@ -71,7 +71,7 @@ p {
     margin-right: 50px;
     text-decoration: none;
     font-size: 1.1rem;
-    color: black;
+    color: #408da9;
 }
 #navContainer > .nav-bar > a:hover {
     text-decoration: underline;
@@ -370,14 +370,14 @@ footer {
     background-color: #e6e2e2;
 }
 
-footer > #social-media {
+footer > #socialMedia {
     padding-top: 2.5%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-footer > #social-media > div {
+footer > #socialMedia > div {
     width: 21%;
     height: 90px;
     display: flex;
@@ -389,31 +389,31 @@ footer > #social-media > div {
     cursor: pointer;
     background: #f3f1f1;
 }
-footer > #social-media > div:hover {
+footer > #socialMedia > div:hover {
     color: white;
 }
-footer > #social-media > div.instagram:hover {
+footer > #socialMedia > div.instagram:hover {
     background: linear-gradient(90deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
 }
-footer > #social-media > div.linkedin:hover {
+footer > #socialMedia > div.linkedin:hover {
     background: linear-gradient(45deg, #0077b5, #00a0dc);
 }
-footer > #social-media > div.github:hover {
+footer > #socialMedia > div.github:hover {
     background: linear-gradient(90deg, #24292e,#2b3137);
 }
-footer > #social-media > div.gmail:hover {
+footer > #socialMedia > div.gmail:hover {
     background: linear-gradient(90deg, #ff4343, #ff5d5d, #b9b5b5);
 }
-footer > #social-media > div > img {
+footer > #socialMedia > div > img {
     width: 50px;
     height: 50px;
     margin: 17px 0 20px 15px;
 }
-footer > #social-media > div > h3 {
+footer > #socialMedia > div > h3 {
     height: 30px;
     margin: 20px 0 0 10px;
 }
-footer > #social-media > div > h3 p {
+footer > #socialMedia > div > h3 p {
     font-size: 17px;
 }
 /* logo */
@@ -592,27 +592,27 @@ footer > p {
         height: 50px; 
         margin-top: 40px;
     }
-    footer > #social-media {
+    footer > #socialMedia {
         height: 270px;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
     }
-    footer > #social-media > div {
+    footer > #socialMedia > div {
         width: 50%;
         height: 55px;
         margin-top: 3%;
     }
-    footer > #social-media > div > img {
+    footer > #socialMedia > div > img {
         width: 20px;
         height: 20px;
     }
-    footer > #social-media > div > h3 {
+    footer > #socialMedia > div > h3 {
         height: 30px;
         margin: 9px 0 0 10px;
         font-size: 0.9rem;
     }
-    footer > #social-media > div > h3 p {
+    footer > #socialMedia > div > h3 p {
         font-size: 11.8px;
     }
     footer > p {
