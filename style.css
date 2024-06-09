@@ -229,9 +229,9 @@ p {
 /* Common styles for all projects div */
 #projects > #container > #left > div,
 #projects > #container > #right > div {
+    width: 400px;
     margin-top: 5%;
     padding: 45px 30px;
-    width: 400px;
     border-radius: 30px;
     background-color: #f3f1f1;
     background-size: 270px;
@@ -343,7 +343,6 @@ p {
     outline: none;
     border-radius: 40px;
     font-weight: 400;
-    color: #666;
     background-color: #ffffff;
 }
 #contact > #emailContainer > #emailBox > textarea {
@@ -369,14 +368,12 @@ footer {
     text-align: center;
     background-color: #e6e2e2;
 }
-
 footer > #socialMedia {
     padding-top: 2.5%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-
 footer > #socialMedia > div {
     width: 21%;
     height: 90px;
@@ -429,7 +426,7 @@ footer > p {
     margin: 50px auto;
 }
 
-/* mobile responsive */
+/* MOBILE RESPONSIVE */
 @media (max-width: 470px) {
     
     h1 {

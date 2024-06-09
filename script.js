@@ -13,9 +13,7 @@ const projectsBox = {
     randomPassword: document.querySelector(".right-two")
 };
 const emailContainer = document.querySelector("#emailContainer");
-const yourName = document.querySelector("#contactInpput1");
-const email = document.querySelector("#contactInpput2");
-const message = document.querySelector("#contactInpput3");
+const footer = document.querySelector("#footer");
 
 // sidebar 
 const sideBar = document.querySelector("#sidebar");
@@ -38,7 +36,7 @@ const gitHub = document.querySelector(".github");
 const gmail = document.querySelector(".gmail");
 
 
-// click event for light /dark mode
+// function for dark / light mode
 function toggleDarkLight () {
     // for dark mode
     // to check if the body element has class name darkMode
@@ -47,6 +45,7 @@ function toggleDarkLight () {
         document.body.classList.add('darkMode');
         // replace icon 
         icon.setAttribute('class', 'bi bi-brightness-high-fill');
+        // background color for website
         body.style.color = 'white';
         body.style.background = 'black';
         nav.style.background = '#181818';
@@ -57,9 +56,7 @@ function toggleDarkLight () {
         projectsBox.quote.style.background = '#181818';
         projectsBox.randomPassword.style.background = '#181818';
         emailContainer.style.background = '#181818';
-        yourName.style.background = 
-        email.style.background =
-        message.style.background =
+        footer.style.background = '#181818';
         console.log("dark mode activated");
     // for light mode
     // code to execute if condition is false
@@ -67,31 +64,42 @@ function toggleDarkLight () {
         document.body.classList.remove('darkMode');
         // replace icon
         icon.setAttribute('class', 'bi bi-moon-stars-fill');
+        // background color for website
         body.style.color = 'black';
         body.style.background = 'white';
+        nav.style.background = '#e6e2e2';
+        aboutBox.education.style.background = '#e9f2f5';
+        aboutBox.experience.style.background = '#e9f2f5';
+        projectsBox.pacman.style.background = '#f3f1f1';
+        projectsBox.taskApp.style.background = '#f3f1f1';
+        projectsBox.quote.style.background = '#f3f1f1';
+        projectsBox.randomPassword.style.background = '#f3f1f1';
+        emailContainer.style.background = '#f3f1f1';
+        footer.style.background = '#e6e2e2';
         console.log("light mode activated");
     };
 };
 
+// click event for dark / light mode
 modeToggle.addEventListener("click", toggleDarkLight);
 
 // sidebar clickevent 
 listMenu.addEventListener("click", function () {
-    console.log("menu button clicked");
     sidebarBackground.style.visibility = "visible";
     sideBar.style.right = "0";
+    console.log("menu button clicked");
 });
 
 closeIcon.addEventListener("click", function () {
-    console.log("close button clicked"); 
     sidebarBackground.style.visibility = "hidden";
     sideBar.style.right = "-200px";
+    console.log("close button clicked"); 
 });
 
 sidebarBackground.addEventListener ("click", function () {
-    console.log("background clicked");
     sidebarBackground.style.visibility = "hidden";
     sideBar.style.right = "-200px";
+    console.log("background clicked");
 });
 
 // projects click event 
