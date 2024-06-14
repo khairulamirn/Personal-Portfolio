@@ -39,7 +39,7 @@ const gitHub = document.querySelector(".github");
 const gmail = document.querySelector(".gmail");
 
 // function for scrollTop 
-function scrollTop () { // document.body.scrollTop > 200 ||
+function scrollTop () {
      if (document.documentElement.scrollTop > 200) {
         btnToTop.style.display = "block";
     } else {
@@ -47,11 +47,14 @@ function scrollTop () { // document.body.scrollTop > 200 ||
     }
 };
 
-// Using the scrollTop for when client scrolls down from the top, show the button
+// Using the scrollTop for when client scrolls down from the top, show the button (Fires when the user repositions the scroll box in the scroll bar on the object.)
 /*normal 
 window.onscroll = function() {scrollTop(); }; */
 // arrow function
 window.onscroll = () => scrollTop();
+
+// Call the scrollTop function once when the page loads to set the initial state (onload = Fires immediately after the browser loads the object.)
+window.onload = () => scrollTop();
 
 // When client user clicks on the button, scroll to the top of the document
 function topFunction () {
