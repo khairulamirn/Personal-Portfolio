@@ -39,8 +39,8 @@ const gitHub = document.querySelector(".github");
 const gmail = document.querySelector(".gmail");
 
 // function for scrollTop 
-function scrollTop () {
-     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+function scrollTop () { // document.body.scrollTop > 200 ||
+     if (document.documentElement.scrollTop > 200) {
         btnToTop.style.display = "block";
     } else {
         btnToTop.style.display = "none";
@@ -55,7 +55,7 @@ window.onscroll = () => scrollTop();
 
 // When client user clicks on the button, scroll to the top of the document
 function topFunction () {
-    document.body.scrollTop = 0; // For safari
+    // document.body.scrollTop = 0; // For safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and OPERA
 };
 
