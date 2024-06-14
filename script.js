@@ -1,3 +1,6 @@
+// scrollTop
+const btnToTop = document.querySelector("#btnToTop");
+
 // light / dark mode 
 const body = document.querySelector("#body");
 const icon = document.querySelector("#modeToggle");
@@ -35,6 +38,26 @@ const linkedIn = document.querySelector(".linkedin");
 const gitHub = document.querySelector(".github");
 const gmail = document.querySelector(".gmail");
 
+// function for scrollTop 
+function scrollTop () {
+     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        btnToTop.style.display = "block";
+    } else {
+        btnToTop.style.display = "none";
+    }
+};
+
+// Using the scrollTop for when client scrolls down from the top, show the button
+/*normal 
+window.onscroll = function() {scrollTop(); }; */
+// arrow function
+window.onscroll = () => scrollTop();
+
+// When client user clicks on the button, scroll to the top of the document
+function topFunction () {
+    document.body.scrollTop = 0; // For safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and OPERA
+};
 
 // function for dark / light mode
 function toggleDarkLight () {
@@ -77,7 +100,7 @@ function toggleDarkLight () {
         emailContainer.style.background = '#f3f1f1';
         footer.style.background = '#e6e2e2';
         console.log("light mode activated");
-    };
+    }
 };
 
 // click event for dark / light mode

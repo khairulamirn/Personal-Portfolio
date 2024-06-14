@@ -35,6 +35,21 @@ p {
     font-weight: 300;
 }
 
+/* btnToTop STYLE */
+#scroll > #btnToTop {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    border-radius: 50%;
+    border: none;
+    z-index: 99;
+    cursor: pointer;
+    background-color: #a2e4ec;
+}
+
 /* NAVCONTAINER STYLE */
 #navContainer {
     width: 55%;
@@ -443,6 +458,10 @@ footer > p {
 
     p {
         font-size: 0.7rem;
+    }
+
+    #scroll > #btnToTop {
+        display: block;
     }
 
     /* NAVCONTAINER STYLE */
