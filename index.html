@@ -23,10 +23,10 @@
     <!-- header for desktop responsive-->
     <header id="navContainer">
         <nav class="nav-bar">
-            <!-- nightmode -->
-            <i id="modeToggle" class="bi bi-moon-stars-fill"></i>
-            <!-- logo and nav menu -->
+            <!-- logo -->
             <img style="width: 40px; height: 40px; border-radius: 50%;" src="assets/logo-khairul.jpg" alt="khairulamirin-logo">
+            <!-- nightmode -->
+            <i id="modeToggle" onclick="toggleDarkLight()" class="bi bi-moon-stars-fill"></i>
             <a style="margin-left: 5%;" href="#hero">Home</a>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
@@ -34,7 +34,13 @@
             <a href="#contact">Contact</a>
         </nav>
         <!-- header for mobile responsive -->
-        <img style="width: 40px; height: 40px; border-radius: 50%; margin-top: 1%;" src="assets/logo-khairul.jpg" alt="khairulamirin-logo">
+         <div>
+            <div id="headerMobileLeft">
+                <img style="width: 40px; height: 40px; border-radius: 50%; margin-top: 5%;" src="assets/logo-khairul.jpg" alt="khairulamirin-logo">
+                <!-- nightmode -->
+                <i style="padding-top: 7px; font-size: 18px;" id="modeToggleMobile" onclick="toggleDarkLight()" class="bi bi-moon-stars-fill"></i>
+            </div>
+         </div>
         <i id="listMenu" class="bi bi-list"></i>
     </header>
     <!-- sidebar for mobile responsive -->
@@ -140,9 +146,9 @@
         <h1>My <span style="color: #82d0e6;">Skills</span></h1>
         <!-- logo -->
         <div id="logoSkills">
-            <img src="assets/html-logo.webp" alt="html">
-            <img src="assets/css-logo.png" alt="css">
-            <img src="assets/JavaScript-logo.png" alt="JavaScript">
+            <img src="assets/html-logo.svg" alt="html">
+            <img src="assets/css-logo.svg" alt="css">
+            <img src="assets/logo-javascript.svg" alt="JavaScript">
         </div>
         <!-- skill percantage -->
         <div id="skillContainer">
@@ -187,25 +193,25 @@
     <footer id="footer">
         <div id="socialMedia">
             <div class="instagram">
-                <img src="assets/instagram.png" alt="instagram">
+                <img src="assets/instagram.svg" alt="instagram">
                 <h3>Instagram <p>@khairulamirn</p></h3>
             </div>
             <div class="linkedin">
-                <img src="assets/linkedin.png" alt="linkedin">
+                <img src="assets/linkedin.svg" alt="linkedin">
                 <h3>LinkedIn <p>Khairulamirin Lamin</p></h3>
             </div>
             <div class="github">
-                <img src="assets/github.png" alt="github">
+                <img src="assets/github.svg" alt="github">
                 <h3>GitHub <p>@khairulamirn</p></h3>
             </div>
             <div class="gmail">
-                <img src="assets/gmail.png" alt="gmail">
+                <img src="assets/gmail.svg" alt="gmail">
                 <h3>Gmail <p>khairulamirn.lamin@gmail.com</p></h3>
             </div>
         </div>
         <img src="assets/logo-khairul.jpg" alt="khairulamirin-logo">
         <!-- copyright -->
-        <p>© Khairulamirin 2024. All rights reserved.</p>
+        <p>© Khairulamirin 2024 | All rights reserved.</p>
     </footer>
 </body>
 </html>

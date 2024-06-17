@@ -61,16 +61,23 @@ p {
     background-color: #e6e2e2;
 }
 #navContainer > .nav-bar > i {
-    margin-left: 30px;
+    margin-right: 100px;
     font-size: 20px;
     cursor: pointer;
 }
 #navContainer > .nav-bar > img {
     display: block;
-    margin: 0 70px 0 130px;
+    margin: 0 50px 0 50px;
 }
-#navContainer > img {
+#navContainer > div {
     display: none;
+    width: 75px;
+    margin-left: 20px;
+}
+#navContainer > div > #headerMobileLeft {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 #navContainer > i#listMenu {
     display: none;
@@ -253,7 +260,7 @@ p {
     background-position: center;
     background-position-y: 200px;
     background-repeat: no-repeat;
-    transition: all 0.4s ease-in-out;
+    /* transition: all 0.4s ease-in-out; */
 }
 #projects > #container > #left .left-one,
 #projects > #container > #right .right-two {
@@ -344,6 +351,7 @@ p {
     justify-content: center;
     border-radius: 20px;
     background-color: #f3f1f1;
+    /* transition: all 0.4s ease-in-out; */
 }
 #contact > #emailContainer > #emailBox {
     display: flex;
@@ -400,6 +408,7 @@ footer > #socialMedia > div {
     outline: 0;
     cursor: pointer;
     background: #f3f1f1;
+    /* transition: all 0.4s ease-in-out; */
 }
 footer > #socialMedia > div:hover {
     color: white;
@@ -417,9 +426,9 @@ footer > #socialMedia > div.gmail:hover {
     background: linear-gradient(90deg, #ff4343, #ff5d5d, #b9b5b5);
 }
 footer > #socialMedia > div > img {
-    width: 50px;
-    height: 50px;
-    margin: 17px 0 20px 15px;
+    width: 42px;
+    height: 45px;
+    margin: 20px 0 20px 15px;
 }
 footer > #socialMedia > div > h3 {
     height: 30px;
@@ -477,14 +486,14 @@ footer > p {
         background-color: #eae9e9;
         z-index: 1;
     }
-    #navContainer > img {
+    #navContainer > .nav-bar{
+        display: none;
+    }
+    #navContainer > div {
         display: block;
     }
     #navContainer > i#listMenu {
         display: inline-block;
-    }
-    #navContainer > .nav-bar{
-        display: none;
     }
 
     /* SIDEBAR STYLE */

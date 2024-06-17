@@ -4,6 +4,7 @@ const btnToTop = document.querySelector("#btnToTop");
 // light / dark mode 
 const body = document.querySelector("#body");
 const icon = document.querySelector("#modeToggle");
+const iconMobile = document.querySelector("#modeToggleMobile");
 const nav = document.querySelector("#navContainer");
 const aboutBox = {
     education: document.querySelector(".education"),
@@ -38,25 +39,51 @@ const linkedIn = document.querySelector(".linkedin");
 const gitHub = document.querySelector(".github");
 const gmail = document.querySelector(".gmail");
 
-// function for scrollTop 
+// Define the media query for mobile devices
+const mobileMediaQuery = window.matchMedia("(max-width: 470px)");
+
+// Function to show or hide the "scroll to top" button based on scroll position and media query
 function scrollTop () {
-     if (document.documentElement.scrollTop > 200) {
-        btnToTop.style.display = "block";
-    } else {
+     if (mobileMediaQuery.matches) { // check if the media query matches
+        if (document.documentElement.scrollTop > 200) {
+            btnToTop.style.display = "block";
+        } else {
         btnToTop.style.display = "none";
-    }
+        }
+     } else {
+        // hide the button if it's not a mobile devices
+        btnToTop.style.display = "none";
+     }
 };
 
-// Using the scrollTop for when client scrolls down from the top, show the button (Fires when the user repositions the scroll box in the scroll bar on the object.)
-/*normal 
-window.onscroll = function() {scrollTop(); }; */
-// arrow function
-window.onscroll = () => scrollTop();
+// Function to handle the scroll event (invoke or calling)
+function handleScroll () {
+    scrollTop();
+};
 
-// Call the scrollTop function once when the page loads to set the initial state (onload = Fires immediately after the browser loads the object.)
-window.onload = () => scrollTop();
+// Function to handle changes in media query state
+function handleMediaQueryChange(e) {
+    if (e.matches) {
+        // Media query matches (i.e., on mobile), check scroll position 
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
+    } else {
+        // Media query does not match (i.e., on desktop), hide the button
+        btnToTop.style.display = "none";
+        window.removeEventListener('scroll', handleScroll);
+    }
+};
+// Without this function, the scroll event listener would not be managed properly, leading to potential issues like unnecessary event listeners on desktop devices or the button not appearing/disappearing correctly on mobile devices.
 
-// When client user clicks on the button, scroll to the top of the document
+// Initial check 
+handleMediaQueryChange(mobileMediaQuery);
+
+// Add listener for media query changes
+mobileMediaQuery.addEventListener('change', handleMediaQueryChange);
+
+// click event listener used onclick at index.html
+
+// Function to scroll to the top of the document when the button is clicked
 function topFunction () {
     // document.body.scrollTop = 0; // For safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and OPERA
@@ -70,18 +97,23 @@ function toggleDarkLight () {
     if (!document.body.classList.contains('darkMode')) {
         document.body.classList.add('darkMode');
         // replace icon 
-        icon.setAttribute('class', 'bi bi-brightness-high-fill');
+        icon.setAttribute('class', 'bi bi-brightness-high-fill'); // desktop
+        iconMobile.setAttribute('class', 'bi bi-brightness-high-fill'); //mobile
         // background color for website
         body.style.color = 'white';
         body.style.background = 'black';
         nav.style.background = '#181818';
         aboutBox.education.style.background = '#181818';
         aboutBox.experience.style.background = '#181818';
-        projectsBox.pacman.style.background = '#181818';
-        projectsBox.taskApp.style.background = '#181818';
-        projectsBox.quote.style.background = '#181818';
-        projectsBox.randomPassword.style.background = '#181818';
+        projectsBox.pacman.style.backgroundColor = '#181818';
+        projectsBox.taskApp.style.backgroundColor = '#181818';
+        projectsBox.quote.style.backgroundColor = '#181818';
+        projectsBox.randomPassword.style.backgroundColor = '#181818';
         emailContainer.style.background = '#181818';
+        instagram.style.backgroundColor = '#171212';
+        linkedIn.style.backgroundColor = '#171212';
+        gitHub.style.backgroundColor = '#171212';
+        gmail.style.backgroundColor = '#171212';
         footer.style.background = '#181818';
         console.log("dark mode activated");
     // for light mode
@@ -89,25 +121,29 @@ function toggleDarkLight () {
     } else {
         document.body.classList.remove('darkMode');
         // replace icon
-        icon.setAttribute('class', 'bi bi-moon-stars-fill');
+        icon.setAttribute('class', 'bi bi-moon-stars-fill'); // desktop
+        iconMobile.setAttribute('class', 'bi bi-brightness-high-fill'); //mobile
         // background color for website
         body.style.color = 'black';
         body.style.background = 'white';
         nav.style.background = '#e6e2e2';
         aboutBox.education.style.background = '#e9f2f5';
         aboutBox.experience.style.background = '#e9f2f5';
-        projectsBox.pacman.style.background = '#f3f1f1';
-        projectsBox.taskApp.style.background = '#f3f1f1';
-        projectsBox.quote.style.background = '#f3f1f1';
-        projectsBox.randomPassword.style.background = '#f3f1f1';
+        projectsBox.pacman.style.backgroundColor = '#f3f1f1';
+        projectsBox.taskApp.style.backgroundColor = '#f3f1f1';
+        projectsBox.quote.style.backgroundColor = '#f3f1f1';
+        projectsBox.randomPassword.style.backgroundColor = '#f3f1f1';
         emailContainer.style.background = '#f3f1f1';
+        instagram.style.backgroundColor = '#f3f1f1';
+        linkedIn.style.backgroundColor = '#f3f1f1';
+        gitHub.style.backgroundColor = '#f3f1f1';
+        gmail.style.backgroundColor = '#f3f1f1';
         footer.style.background = '#e6e2e2';
         console.log("light mode activated");
     }
 };
 
-// click event for dark / light mode
-modeToggle.addEventListener("click", toggleDarkLight);
+// click event for dark / light mode using onclick at html for id modeToggle and modeToggleMobile
 
 // sidebar clickevent 
 listMenu.addEventListener("click", function () {
