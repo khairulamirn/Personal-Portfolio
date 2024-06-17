@@ -122,7 +122,7 @@ function toggleDarkLight () {
         document.body.classList.remove('darkMode');
         // replace icon
         icon.setAttribute('class', 'bi bi-moon-stars-fill'); // desktop
-        iconMobile.setAttribute('class', 'bi bi-brightness-high-fill'); //mobile
+        iconMobile.setAttribute('class', 'bi bi-moon-stars-fill'); //mobile
         // background color for website
         body.style.color = 'black';
         body.style.background = 'white';
